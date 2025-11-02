@@ -1,0 +1,58 @@
+{
+  "name": "@contentstorage/react-intl-plugin",
+  "version": "1.0.0",
+  "description": "react-intl plugin for Contentstorage live editor translation tracking",
+  "author": "Kaido Hussar <kaido@contentstorage.app>",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "release": "npx release-it"
+  },
+  "keywords": [
+    "react-intl",
+    "contentstorage",
+    "translation",
+    "live-editor",
+    "i18n",
+    "internationalization",
+    "react",
+    "formatjs"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-intl": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^10.0.1",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.45",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "react": "^18.2.0",
+    "react-intl": "^6.5.5",
+    "release-it": "^19.0.5",
+    "rollup": "^4.9.4",
+    "ts-jest": "^29.1.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contentstorage/react-intl-plugin.git"
+  }
+}
