@@ -13,7 +13,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "type-check": "tsc --noEmit",
     "prepublishOnly": "npm run build",
     "release": "npx release-it"

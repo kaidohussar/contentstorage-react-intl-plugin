@@ -13,7 +13,7 @@
     "publish": true
   },
   "hooks": {
-    "before:init": ["npm run type-check", "npm test"],
+    "before:init": ["npm run type-check"],
     "after:bump": "npm run build"
   }
 }

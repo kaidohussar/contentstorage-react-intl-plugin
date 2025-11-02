@@ -97,9 +97,6 @@ The plugin automatically limits the size of `window.memoryMap` to prevent memory
   // Optional: Maximum number of entries in memoryMap
   maxMemoryMapSize={10000}
 
-  // Optional: Custom query parameter for live editor detection
-  liveEditorParam="contentstorage_live_editor"
-
   // Optional: Force live mode (useful for testing)
   forceLiveMode={false}
 
