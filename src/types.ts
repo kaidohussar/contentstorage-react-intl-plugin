@@ -26,6 +26,7 @@ export type MemoryMap = Map<string, MemoryMapEntry>;
  */
 export interface ContentstorageWindow extends Window {
   memoryMap?: MemoryMap;
+  currentLanguageCode?: string;
   __contentStorageDebug?: boolean;
 }
 

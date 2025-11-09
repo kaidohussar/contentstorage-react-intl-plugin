@@ -13,6 +13,7 @@ import {
   loadLiveEditorScript,
   flattenMessages,
   cleanupMemoryMap,
+  getContentstorageWindow,
 } from './utils';
 export interface ContentstorageIntlProviderProps extends IntlConfig {
   children: React.ReactNode;
@@ -82,6 +83,20 @@ export function ContentstorageIntlProvider({
 
     // Initialize memory map
     initializeMemoryMap();
+
+    // Set current language code on window
+    const win = getContentstorageWindow();
+    if (win) {
+      const previousLanguage = win.currentLanguageCode;
+
+      if (previousLanguage && previousLanguage !== locale) {
+        console.log(`[ContentStorage] Changing currentLanguageCode from "${previousLanguage}" to "${locale}"`);
+      } else if (!previousLanguage) {
+        console.log(`[ContentStorage] Setting currentLanguageCode to "${locale}"`);
+      }
+
+      win.currentLanguageCode = locale;
+    }
 
     // Load live editor script
     loadLiveEditorScript(2, 3000, debug).then((loaded) => {
